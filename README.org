@@ -1,0 +1,37 @@
+* js2hl
+Highlight/rename things using [[https://github.com/mooz/js2-mode][js2-mode]] parser.
+
+It's based on "js2r-highlights.el" by Mihai Bazon.
+
+See [[http://lisperator.net/blog/emacs-and-javascript-in-2017/]].
+
+I clean the code to make this program only dependent on [[https://github.com/mooz/js2-mode][js2-mode]].
+
+Screen cast:
+[[file:demo.gif]]
+
+* Install
+Place =js2hl.el= under [[https://www.emacswiki.org/emacs/LoadPath][Load Path]]. Then add =(require 'js2hl)= to your configuration.
+* Set up
+Insert below code into =~/.emacs=:
+#+BEGIN_SRC lisp
+(require 'js2hl)
+#+END_SRC
+* Usage
+=M-x js2hl-show-thing-at-point= to show things at point.
+
+Things are variable, strings, numbers, names like "this" or "super". It uses parser of [[https://github.com/mooz/js2-mode][js2-mode]]  to extract correct things.
+
+=M-x js2hl-rename-thing-at-point= to rename things at point.
+
+=M-x js2hl-show-exits= to show exit points from the function surrounding point. That is, =return= and =throw= statements.
+
+=M-x js2hl-forget-it= to exit highlight mode.
+
+=M-x js2hl-move-next= and =M-x js2hl-move-prev= to move between the highlights.
+* Contact me
+Report bugs at [[https://github.com/redguardtoo/js2hl]].
+* License
+This program is free software: you can redistribute it and/or modify it under the terms of the [[https://raw.githubusercontent.com/redguardtoo/js2hl/master/LICENSE][GNU General Public License]] as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [[https://raw.githubusercontent.com/redguardtoo/js2hl/master/LICENSE][GNU General Public License]] for more details.
