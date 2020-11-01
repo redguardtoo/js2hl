@@ -247,7 +247,8 @@ That is, `return' and `throw' statements."
   (let* (first-place)
     (cond
      ((and places (consp (setq first-place (nth 0 places))))
-      (buffer-substring-no-properties (car first-place) (cdr first-place)))
+      (kill-new (buffer-substring-no-properties (car first-place)
+                                                (cdr first-place))))
      (t
       ""))))
 
