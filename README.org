@@ -1,4 +1,7 @@
 * js2hl
+[[http://melpa.org/#/js2hl][file:http://melpa.org/packages/js2hl-badge.svg]]
+[[http://stable.melpa.org/#/js2hl][file:http://stable.melpa.org/packages/js2hl-badge.svg]]
+
 Highlight/rename things using [[https://github.com/mooz/js2-mode][js2-mode]] parser.
 
 It's based on "js2r-highlights.el" by Mihai Bazon.
