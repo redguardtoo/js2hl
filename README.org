@@ -10,6 +10,8 @@ I clean the code to make this program only dependent on [[https://github.com/moo
 Screen cast:
 [[file:demo.gif]]
 
+[[file:change-property.png]]
+
 * Install
 Place =js2hl.el= under [[https://www.emacswiki.org/emacs/LoadPath][Load Path]]. Then add =(require 'js2hl)= to your configuration.
 * Set up
@@ -20,7 +22,7 @@ Insert below code into =~/.emacs=:
 * Usage
 =M-x js2hl-show-thing-at-point= to show things at point.
 
-Things are variable, strings, numbers, names like "this" or "super". It uses parser of [[https://github.com/mooz/js2-mode][js2-mode]]  to extract correct things.
+Things are variable or its property, strings, numbers, names like "this" or "super". It uses parser of [[https://github.com/mooz/js2-mode][js2-mode]]  to extract correct things.
 
 =M-x js2hl-rename-thing-at-point= to rename things at point.
 
