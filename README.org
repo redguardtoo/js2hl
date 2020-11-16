@@ -16,7 +16,7 @@ Screen cast:
 [[file:change-property.png]]
 
 * Install
-Place =js2hl.el= under [[https://www.emacswiki.org/emacs/LoadPath][Load Path]]. Then add =(require 'js2hl)= to your configuration.
+It's already uploaded to [[http://melpa.org]]. The best way to install is Emacs package manager.
 * Set up
 Insert below code into =~/.emacs=:
 #+BEGIN_SRC lisp
@@ -27,7 +27,7 @@ Insert below code into =~/.emacs=:
 
 Things are variable or its property, strings, numbers, names like "this" or "super". It uses parser of [[https://github.com/mooz/js2-mode][js2-mode]]  to extract correct things.
 
-=M-x js2hl-rename-thing-at-point= to rename things at point.
+=M-x js2hl-rename-thing-at-point= to rename things at point. If its optional parameter N > 0, only occurrences in current N lines are renamed.
 
 =M-x js2hl-show-exits= to show exit points from the function surrounding point. That is, =return= and =throw= statements.
 
