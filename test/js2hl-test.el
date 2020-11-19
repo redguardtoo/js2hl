@@ -28,8 +28,12 @@
 
 (defun js2hl-test-curline ()
   "Get current line."
-  (string-trim (buffer-substring-no-properties (line-beginning-position)
-                                               (line-end-position))))
+  ;; make ci server happy. Don't know why emacs25 does not support `string-trim'
+  (let ((line (buffer-substring-no-properties (line-beginning-position)
+                                              (line-end-position))))
+    (replace-regexp-in-string "\\`[ \t\n]*" ""
+                              (replace-regexp-in-string "[ \t\n]*\\'" "" line))))
+
 (defun js2hl-test-insert-js-code ()
   "Insert code for test."
   (insert "function hello (a1) {\n")
