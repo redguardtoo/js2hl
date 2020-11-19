@@ -17,6 +17,7 @@ Screen cast:
 
 * Install
 It's already uploaded to [[http://melpa.org]]. The best way to install is Emacs package manager.
+
 * Set up
 Insert below code into =~/.emacs=:
 #+BEGIN_SRC lisp

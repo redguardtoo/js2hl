@@ -7,7 +7,7 @@
 ;; Keywords: convenience
 ;; Author: Chen Bin <chenbin DOT sh AT gmail DOT com>
 ;; URL: https://github.com/redguardtoo/js2hl
-;; Package-Requires: ((emacs "24.4") (js2-mode "20190219"))
+;; Package-Requires: ((emacs "25.1") (js2-mode "20190219"))
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -329,8 +329,10 @@ If N > 0, only occurrences in current N lines are renamed."
             (when (and (<= edit-begin begin) (< end edit-end))
               (delete-region begin end)
               (goto-char begin)
-              (insert new-name))))
-        (message "%d occurrences renamed to %s" cnt new-name)))
+              (insert new-name)))))
+      ;; force update the AST, so user can start next renaming immediately
+      (js2-do-parse)
+      (message "%d occurrences renamed to %s" cnt new-name))
     (js2hl-forget-it)))
 
 ;;;###autoload
