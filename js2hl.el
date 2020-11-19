@@ -308,7 +308,6 @@ That is, `return' and `throw' statements."
 (defun js2hl-rename-thing-at-point-internal (new-name-function n)
   "Replace the highlighted things with result of calling NEW-NAME-FUNCTION.
 If N > 0, only occurrences in current N lines are renamed."
-  (interactive "P")
   (let* ((places (sort (js2hl-get-regions-at-point) #'js2hl-compare-regions))
          (old-name (js2hl-get-old-name places))
          (new-name (funcall new-name-function old-name))
