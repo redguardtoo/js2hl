@@ -313,7 +313,8 @@ If N > 0, only occurrences in current N lines are renamed."
          (old-name (js2hl-get-old-name places))
          (new-name (funcall new-name-function old-name))
          (edit-begin (point-min))
-         (edit-end (point-max)))
+         (edit-end (point-max))
+         (cnt (length places)))
 
     (when (and n (> 0))
       (setq edit-begin (line-beginning-position))
@@ -330,7 +331,7 @@ If N > 0, only occurrences in current N lines are renamed."
               (delete-region begin end)
               (goto-char begin)
               (insert new-name))))
-        (message "%d occurrences renamed to %s" (length places) new-name)))
+        (message "%d occurrences renamed to %s" cnt new-name)))
     (js2hl-forget-it)))
 
 ;;;###autoload
