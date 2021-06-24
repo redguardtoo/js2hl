@@ -1,5 +1,5 @@
 * js2hl
-[[https://travis-ci.org/redguardtoo/js2hl][https://travis-ci.org/redguardtoo/js2hl.svg?branch=master]]
+[[https://github.com/redguardtoo/js2hl/actions/workflows/test.yml][https://github.com/redguardtoo/js2hl/actions/workflows/test.yml/badge.svg]]
 [[http://melpa.org/#/js2hl][file:http://melpa.org/packages/js2hl-badge.svg]]
 [[http://stable.melpa.org/#/js2hl][file:http://stable.melpa.org/packages/js2hl-badge.svg]]
 
